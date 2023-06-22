@@ -11,3 +11,12 @@
 # ansible support double qoutes and single qoutes also, however qoutes are not mandatory if value starts with a variable, meaning
 # qoutes are mandatory if value starts with a variable , meaning
 # msg: {{URL}} <- this doesnot require qouting
+- name: demo on task level variables
+  hosts: all
+  vars:
+    URL: task.example.com
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+        #only task have that variables, other tasks cannot access it
