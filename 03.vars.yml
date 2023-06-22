@@ -19,4 +19,15 @@
     - name: print URL
       ansible.builtin.debug:
         msg: URL - {{URL}}
-        #only task have that variables, other tasks cannot access it
+#only task have that variables, other tasks cannot access it
+
+
+- name: load vars from a file
+  hosts: all
+  vars:
+    -exvars.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+#vars.files doesnot support task level,it is for play level only
