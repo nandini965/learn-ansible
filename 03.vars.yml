@@ -11,6 +11,19 @@
 # ansible support double qoutes and single qoutes also, however qoutes are not mandatory if value starts with a variable, meaning
 # qoutes are mandatory if value starts with a variable , meaning
 # msg: {{URL}} <- this doesnot require qouting
+
+
+- name: load vars from a file
+  hosts: all
+  vars-file:
+    - exvars.yml
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+#vars.files doesnot support task level,it is for play level only
+
+
 - name: demo on task level variables
   hosts: all
   vars:
