@@ -33,3 +33,12 @@
       ansible.builtin.debug:
         msg: URL - {{URL}}
 #only task have that variables, other tasks cannot access it
+
+
+- name: variable from roles
+  hosts: all
+  vars:
+    URL_play: play.example.com
+  roles:
+    - sample
+
