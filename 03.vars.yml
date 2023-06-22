@@ -42,7 +42,7 @@
   roles:
     - sample
 
-- name: demo register variables
+- name: demo on register variables
   hosts: all
   tasks:
    - name: run uptime shell command
