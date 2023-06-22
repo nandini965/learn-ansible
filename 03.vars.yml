@@ -1,0 +1,13 @@
+- name: demo on play level variables
+  hosts: all
+  vars:
+  URL: play.example.com
+  tasks:
+    - name: print URL
+      ansible.builtin.debug:
+        msg: URL - {{URL}}
+
+# in ansible variables will be accessed using {{}}
+# ansible support double qoutes and single qoutes also, however qoutes are not mandatory if value starts with a variable, meaning
+# qoutes are mandatory if value starts with a variable , meaning
+# msg: {{URL}} <- this doesnot require qouting
