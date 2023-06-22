@@ -15,8 +15,8 @@
 
 - name: load vars from a file
   hosts: all
-  vars_file:
-    - exvars.yml
+  vars-file:
+   - exvars.yml
   tasks:
     - name: print URL
       ansible.builtin.debug:
