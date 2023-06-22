@@ -45,11 +45,9 @@
 - name: demo register variables
   hosts: all
   tasks:
-    - name: Run uptime shell command
-
-- name: run uptime shell command
-  ansible.builtin.shell.uptime
-  register: output
-- name: print output
-  ansible.builtin.debug:
-    msg: '{{output.stdout}}'
+    - name: run uptime shell command
+      ansible.builtin.shell: uptime
+      register: output
+    - name: print output
+      ansible.builtin.debug:
+         msg: '{{output.stdout}}'
