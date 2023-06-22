@@ -20,7 +20,7 @@
   tasks:
     - name: print URL
       ansible.builtin.debug:
-        msg: URL - {{URL}}
+        msg: URL - {{ URL }}
 #vars.files doesnot support task level,it is for play level only
 
 
