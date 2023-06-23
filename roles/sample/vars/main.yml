@@ -1,6 +1,6 @@
-- name: print hello world
+- name: print Hello world
   ansible.builtin.debug:
-    msg: hello from role sample
+    msg: Hello from role sample
 
 - name: print variable from role
   ansible.builtin.debug:
