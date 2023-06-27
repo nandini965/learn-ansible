@@ -4,5 +4,5 @@
   tasks:
 - name: print a parameter
   ansible.builtin.debug:
-    msg: parameter - {{ lookup('aws_ssm', 'test.test'us-east-1)
+    msg: parameter - {{ lookup('aws_ssm', 'test.test', region='us-east-1'}}
 
